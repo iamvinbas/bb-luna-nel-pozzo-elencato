@@ -1,6 +1,6 @@
 # La Luna nel Pozzo — versione "elencato"
 
-Sito statico per l'appartamento **La Luna nel Pozzo** (Molfetta, Bari): contenuti tratti dal sito originale ([bb-luna-nel-pozzo](https://iamvinbas.github.io/bb-luna-nel-pozzo/)), condensati per il cliente finale, con lo stile "elencato" copiato da [dimorasorrisoguide.netlify.app](https://dimorasorrisoguide.netlify.app/): colonna singola, palette stone/amber, font Inter, e un **menu a tendine** (accordion nativo `<details>/<summary>`, chevron che ruota all'apertura) con le voci Appartamento, Comfort, Galleria, Dove siamo, Prenota.
+Sito statico per l'appartamento **La Luna nel Pozzo** (Molfetta, Bari): contenuti tratti dal sito originale ([bb-luna-nel-pozzo](https://iamvinbas.github.io/bb-luna-nel-pozzo/)), condensati per il cliente finale, con lo stile "elencato": colonna singola, palette stone/amber, font Inter, e un **menu a tendine** (accordion nativo `<details>/<summary>`, chevron che ruota all'apertura) con le voci Appartamento, Comfort, Galleria, Dove siamo, Prenota.
 
 ## Struttura
 
