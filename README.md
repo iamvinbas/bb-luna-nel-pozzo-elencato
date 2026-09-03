@@ -1,14 +1,14 @@
 # La Luna nel Pozzo — versione "elencato"
 
-Sito statico per l'appartamento **La Luna nel Pozzo** (Molfetta, Bari), stessi contenuti del sito originale ([bb-luna-nel-pozzo](https://iamvinbas.github.io/bb-luna-nel-pozzo/)) ma con lo stile visivo "elencato" (card-based, palette calda stone/amber, font Inter) ispirato a [dimorasorrisoguide.netlify.app](https://dimorasorrisoguide.netlify.app/).
+Sito statico per l'appartamento **La Luna nel Pozzo** (Molfetta, Bari): contenuti tratti dal sito originale ([bb-luna-nel-pozzo](https://iamvinbas.github.io/bb-luna-nel-pozzo/)), condensati per il cliente finale, con lo stile "elencato" — colonna singola, liste di card con icone — copiato da [dimorasorrisoguide.netlify.app](https://dimorasorrisoguide.netlify.app/) (palette stone/amber, font Inter, card rounded-2xl, righe con icona).
 
 ## Struttura
 
 ```
-index.html      contenuto e sezioni
-css/style.css   design system (colori, card, tipografia)
-js/main.js      menu mobile, lightbox galleria, mappa, form → WhatsApp
-images/         foto dell'appartamento e di Molfetta
+index.html      contenuto: welcome card, appartamento, dotazioni, galleria, dove siamo, prenota
+css/style.css   design system (colori, card, liste)
+js/main.js      lightbox mini-galleria
+images/         foto essenziali (hero + 4 galleria)
 ```
 
 ## Sviluppo locale
