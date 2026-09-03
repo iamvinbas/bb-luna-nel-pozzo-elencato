@@ -19,11 +19,14 @@ const photos = Array.from(document.querySelectorAll(".mini-photo"));
 const lightbox = document.getElementById("lightbox");
 const lightboxContent = document.getElementById("lightbox-content");
 let currentIndex = 0;
+let lastFocused = null;
 
 function openLightbox(index) {
   currentIndex = index;
+  lastFocused = document.activeElement;
   renderLightbox();
   lightbox.classList.add("active");
+  document.getElementById("lightbox-close")?.focus();
 }
 function renderLightbox() {
   const img = photos[currentIndex].querySelector("img");
@@ -31,9 +34,18 @@ function renderLightbox() {
 }
 function closeLightbox() {
   lightbox.classList.remove("active");
+  lastFocused?.focus();
 }
 
-photos.forEach((item, i) => item.addEventListener("click", () => openLightbox(i)));
+photos.forEach((item, i) => {
+  item.addEventListener("click", () => openLightbox(i));
+  item.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openLightbox(i);
+    }
+  });
+});
 document.getElementById("lightbox-close")?.addEventListener("click", closeLightbox);
 document.getElementById("lightbox-prev")?.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + photos.length) % photos.length;
