@@ -1,3 +1,19 @@
+// Apri automaticamente la voce a tendine corrispondente a un link #ancora
+function openAccordionFromHash() {
+  const id = location.hash.slice(1);
+  if (!id) return;
+  const el = document.getElementById(id);
+  const details = el?.closest ? el.closest("details") : null;
+  const target = el?.tagName === "DETAILS" ? el : details;
+  if (target && !target.open) target.open = true;
+  target?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+window.addEventListener("hashchange", openAccordionFromHash);
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", () => setTimeout(openAccordionFromHash, 0));
+});
+if (location.hash) openAccordionFromHash();
+
 // Mini-gallery lightbox
 const photos = Array.from(document.querySelectorAll(".mini-photo"));
 const lightbox = document.getElementById("lightbox");
