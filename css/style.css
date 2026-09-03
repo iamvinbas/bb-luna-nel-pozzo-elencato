@@ -187,7 +187,7 @@ a { color: inherit; text-decoration: none; }
   -webkit-tap-highlight-color: transparent;
 }
 .accordion-item summary::-webkit-details-marker { display: none; }
-.accordion-item summary::marker { content: ""; }
+.accordion-item summary::marker { display: none; content: ""; }
 .summary-title { flex: 1; }
 .chevron { width: 18px; height: 18px; color: var(--stone-400); flex-shrink: 0; transition: transform 0.22s ease, color 0.22s ease; }
 .accordion-item[open] summary { color: var(--amber-700); }
